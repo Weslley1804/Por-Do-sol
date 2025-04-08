@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mecânica Pôr do Sol</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+    }
+    header {
+      background-color: #8B0000;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background: #8B0000;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #8B0000;
+      color: white;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background-color: #000;
+      padding: 20px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mecânica Pôr do Sol</h1>
+    <p>Atendimento todos os dias das 8h às 23h</p>
+  </header>  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#agendamento">Agendamento</a>
+    <a href="#contato">Contato</a>
+  </nav>  <section id="inicio">
+    <h2>Bem-vindo!</h2>
+    <p>Somos especializados em mecânica e borracharia geral. Prontos para te atender com qualidade e agilidade.</p>
+  </section>  <section id="servicos" class="services">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Mecânica geral</li>
+      <li>Borracharia geral</li>
+    </ul>
+  </section>  <section id="agendamento">
+    <h2>Agende um horário</h2>
+    <form action="mailto:duarteweslley023@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="tel" name="telefone" placeholder="Telefone" required>
+      <input type="datetime-local" name="datahora" required>
+      <select name="servico">
+        <option value="Mecânica geral">Mecânica geral</option>
+        <option value="Borracharia geral">Borracharia geral</option>
+      </select>
+      <textarea name="mensagem" placeholder="Observações"></textarea>
+      <button type="submit">Agendar</button>
+    </form>
+  </section>  <section id="contato">
+    <h2>Contato</h2>
+    <p><strong>Endereço:</strong> Avenida 13 de Setembro, próximo ao Mirante</p>
+    <p><strong>Telefone:</strong> <a href="tel:+5548996271145" style="color: white;">(48) 99627-1145</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mecanicapordosol" target="_blank" style="color: white;">@mecanica por do sol</a></p>
+    <p><strong>Email:</strong> duarteweslley023@gmail.com</p>
+  </section>  <footer>
+    <p>&copy; 2025 Mecânica Pôr do Sol. Todos os direitos reservados.</p>
+  </footer>
+</body>
+  </html>
