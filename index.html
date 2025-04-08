@@ -85,27 +85,32 @@
       <li>Mecânica geral</li>
       <li>Borracharia geral</li>
     </ul>
-  </section>  <section id="agendamento">
-    <h2>Agende um horário</h2>
-    <form action="mailto:duarteweslley023@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="tel" name="telefone" placeholder="Telefone" required>
-      <input type="datetime-local" name="datahora" required>
-      <select name="servico">
-        <option value="Mecânica geral">Mecânica geral</option>
-        <option value="Borracharia geral">Borracharia geral</option>
-      </select>
-      <textarea name="mensagem" placeholder="Observações"></textarea>
-      <button type="submit">Agendar</button>
-    </form>
-  </section>  <section id="contato">
-    <h2>Contato</h2>
-    <p><strong>Endereço:</strong> Avenida 13 de Setembro, próximo ao Mirante</p>
-    <p><strong>Telefone:</strong> <a href="tel:+5548996271145" style="color: white;">(48) 99627-1145</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/mecanicapordosol" target="_blank" style="color: white;">@mecanica por do sol</a></p>
-    <p><strong>Email:</strong> duarteweslley023@gmail.com</p>
-  </section>  <footer>
-    <p>&copy; 2025 Mecânica Pôr do Sol. Todos os direitos reservados.</p>
-  </footer>
-</body>
-  </html>
+  <section id="agendamento">
+  <h2>Agende um horário</h2>
+  <form id="whatsappForm" onsubmit="enviarWhatsApp(); return false;">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="tel" id="telefone" placeholder="Seu telefone" required>
+    <input type="datetime-local" id="datahora" required>
+    <select id="servico">
+      <option value="Mecânica geral">Mecânica geral</option>
+      <option value="Borracharia geral">Borracharia geral</option>
+    </select>
+    <textarea id="mensagem" placeholder="Observações"></textarea>
+    <button type="submit">Agendar pelo WhatsApp</button>
+  </form>
+</section>
+
+<script>
+  function enviarWhatsApp() {
+    const nome = document.getElementById('nome').value;
+    const telefone = document.getElementById('telefone').value;
+    const datahora = document.getElementById('datahora').value;
+    const servico = document.getElementById('servico').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const texto = `Olá! Meu nome é ${nome}. Gostaria de agendar um horário para ${datahora} para o serviço de ${servico}. Telefone para contato: ${telefone}. Observações: ${mensagem}`;
+    
+    const url = `https://wa.me/5548996271145?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  }
+    </script>
